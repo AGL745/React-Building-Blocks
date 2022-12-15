@@ -1,0 +1,58 @@
+<body>
+    <div id="root"></div>
+    <div id="secondDiv"></div>
+    <div id="thirdDiv"></div>
+   
+    <!-- Import react from unpkg CDN
+        React - creates elements
+        React DOM - renders elements to page
+    -->
+    <script type="text/javascript" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <script type="text/babel">
+
+        const rootElement = document.getElementById('root')
+
+        const firstElement = React.createElement('span', null, 'You are learning ')
+
+        const secondElement = React.createElement('span', null, ' continue your progress to becoming excellent.')
+
+        const combinedElement = React.createElement(React.Fragment, null, firstElement, secondElement,)
+
+        ReactDOM.render(combinedElement, rootElement)
+        </script>
+
+        <!-- rendering element using React fragment -->
+
+        <script type="text/babel">
+
+        const rootElement1 = document.getElementById('secondDiv')
+
+        const fragmentElement = (
+        <React.Fragment>
+            <span> Let's keep this thing going,</span><span> you are learning trust me!</span> <span> This element is rendered using a React fragment </span>
+        </React.Fragment>
+        )
+
+        ReactDOM.render(fragmentElement, rootElement1)
+        </script>
+
+        <!-- rendering element using React fragment special syntax -->
+
+        <script type="text/babel">
+
+        const rootElement2 = document.getElementById('thirdDiv')
+
+        const fragmentElement2 = (
+            <>
+            <span> Alright here we go,</span><span> you are learning trust me!</span> <span> This element is rendered using a React fragment special syntax  </span>
+            </>
+        )
+
+        ReactDOM.render(fragmentElement2, rootElement2)
+        </script>
+            
+</body>
+
