@@ -1,0 +1,34 @@
+<body>
+    <div id="root"></div>
+   
+    <!-- Import react from unpkg CDN
+        React - creates elements
+        React DOM - renders elements to page
+    -->
+    <script type="text/javascript" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"> </script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+
+    <script type="text/javascript">
+  
+      //Variable captures the element from the HTML page
+      const rootElement = document.getElementById('root')
+    
+      //Use create element to make a div and set properties, uses React to create elements
+      const element = React.createElement('div', {
+        children: ['Hello World', ', This is great! ', React.createElement('span', null, ' New', ' Section')],
+        className: 'container',
+      })
+      
+      //Render elements to the page using ReactDOM
+      ReactDOM.render(element, rootElement)    
+    
+      ///* const element = document.createElement('div')
+      //Add text to element
+      //element.textContent = "This is going to be awesome!"
+      //element.className = 'container'
+      //rootElement.appendChild(element) --> */
+  
+    </script>
+</body>
